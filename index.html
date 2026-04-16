@@ -1,0 +1,214 @@
+export default function ZechuanPlumbingSite() {
+  const services = [
+    {
+      title: '老屋翻修',
+      desc: '針對老屋現場需求，整理水電配置與設備更新，提升使用安全與便利性。',
+    },
+    {
+      title: '衛浴設備安裝',
+      desc: '馬桶、面盆、龍頭、配件與相關給排水調整施工，依現場條件提供建議。',
+    },
+    {
+      title: '水電維修',
+      desc: '燈具不亮、開關插座異常、設備老化等常見問題，可依狀況安排處理。',
+    },
+    {
+      title: '漏水檢修',
+      desc: '協助檢查漏水問題、判斷位置並提出處理方向，降低後續使用風險。',
+    },
+    {
+      title: '給排水配管',
+      desc: '住家與店面給排水整理、局部配管與施工調整，重視後續維修便利性。',
+    },
+    {
+      title: '燈具／開關／插座安裝',
+      desc: '提供燈具更新、插座安裝、開關更換與線路相關調整服務。',
+    },
+  ];
+
+  const projects = [
+    {
+      title: '住宅配管整理',
+      desc: '配管整齊、配置清楚，方便後續維修與使用，也更能提升整體視覺感。',
+    },
+    {
+      title: '衛浴設備更新',
+      desc: '馬桶、面盆、龍頭與相關給排水調整施工，可依空間條件搭配規劃。',
+    },
+    {
+      title: '老屋水電翻修',
+      desc: '依現場需求進行線路與給排水改善，讓空間使用更安心，也更好維護。',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-700">
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex w-[min(calc(100%-32px),1120px)] flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h1 className="m-0 text-3xl font-extrabold tracking-[0.03em] text-[#103a6b]">澤川水電有限公司</h1>
+            <div className="mt-1 text-sm text-slate-500">施工整齊・報價透明・溝通清楚</div>
+          </div>
+          <nav className="flex flex-wrap gap-4 text-[15px] text-slate-700 md:gap-5">
+            <a href="#about" className="transition hover:text-[#1f5fa8]">公司簡介</a>
+            <a href="#services" className="transition hover:text-[#1f5fa8]">服務項目</a>
+            <a href="#projects" className="transition hover:text-[#1f5fa8]">工程實績</a>
+            <a href="#contact" className="transition hover:text-[#1f5fa8]">聯絡我們</a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="bg-gradient-to-br from-[#0b2e57] via-[#14559a] to-[#4ca6e8] text-white">
+        <div className="mx-auto grid w-[min(calc(100%-32px),1120px)] gap-8 py-14 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-20">
+          <div>
+            <div className="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm">
+              台中與南投地區住家 / 店面水電服務
+            </div>
+            <h2 className="mb-4 text-4xl font-black leading-tight md:text-6xl">老屋翻修・衛浴安裝・水電維修</h2>
+            <p className="mb-6 text-base leading-7 text-white/90 md:text-[17px]">
+              提供給排水施工、漏水檢修、燈具安裝、開關插座更新與各類住家、店面水電修繕服務。
+              先把公司形象與聯絡入口放上網，之後可再逐步補上真實施工照片。
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 font-bold text-[#103a6b] transition hover:-translate-y-0.5"
+              >
+                立即洽詢
+              </a>
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/35 bg-white/10 px-6 py-3 font-bold text-white transition hover:-translate-y-0.5"
+              >
+                查看服務
+              </a>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-[26px] border border-white/20 bg-white/10 p-6 shadow-2xl md:col-span-1">
+              <div className="mb-3 text-sm text-white/90">服務重點</div>
+              <div className="grid gap-2 text-lg font-bold">
+                <div>✔ 住家水電修繕</div>
+                <div>✔ 衛浴設備安裝</div>
+                <div>✔ 給排水配管</div>
+                <div>✔ 老屋翻修整理</div>
+              </div>
+            </div>
+
+            <div className="rounded-[26px] bg-white p-6 text-slate-700 shadow-2xl md:col-span-1">
+              <div className="mb-3 text-sm text-slate-500">聯絡方式</div>
+              <div className="mb-1 text-3xl font-extrabold text-[#103a6b]">0935-350-295</div>
+              <div className="break-all">lightning7620@gmail.com</div>
+              <div className="mt-4 rounded-2xl bg-green-50 px-3 py-2 text-sm text-green-800">
+                可加 LINE 洽詢 / 可先傳現場照片評估
+              </div>
+            </div>
+
+            <div className="rounded-[26px] border border-white/20 bg-white/10 p-6 shadow-2xl md:col-span-2">
+              <div className="mb-3 text-sm text-white/90">主視覺位置</div>
+              <div className="grid min-h-[240px] place-items-center rounded-[20px] border border-dashed border-white/35 bg-white/5 p-6 text-center text-white/90">
+                之後可替換成你的真實施工形象照、配管整齊照、衛浴安裝照
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-14 md:py-[72px]">
+        <div className="mx-auto grid w-[min(calc(100%-32px),1120px)] gap-6 md:grid-cols-[1.15fr_0.85fr]">
+          <div className="rounded-[22px] border border-slate-200/90 bg-white p-7 shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+            <h2 className="mb-3 text-4xl font-bold leading-tight text-[#103a6b]">公司簡介</h2>
+            <p className="m-0 leading-8">
+              澤川水電有限公司，提供台中與南投地區住家與店面水電工程、老屋翻修、衛浴設備安裝、給排水施工、漏水檢修、燈具安裝、開關插座更換與各類水電修繕服務。
+              重視施工品質、現場整潔與溝通效率，讓客戶在施工前後都能更安心。
+            </p>
+          </div>
+
+          <div className="rounded-[22px] border border-slate-200/90 bg-white p-7 shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+            <h3 className="mb-3 text-2xl font-bold text-slate-900">為什麼客戶會找你</h3>
+            <ul className="mb-0 mt-4 list-disc space-y-2 pl-5">
+              <li>報價透明，不亂追加</li>
+              <li>配管與施工整齊</li>
+              <li>可先看照片初步判斷</li>
+              <li>適合住家、店面、小型翻修案件</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="bg-white py-14 md:py-[72px]">
+        <div className="mx-auto w-[min(calc(100%-32px),1120px)]">
+          <h2 className="mb-3 text-4xl font-bold leading-tight text-[#103a6b]">服務項目</h2>
+          <p className="m-0 text-base text-slate-500">
+            這些文字也可以同步沿用到 Google 商家、IG、Facebook 與未來網站 SEO。
+          </p>
+
+          <div className="mt-7 grid gap-[18px] md:grid-cols-3">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="rounded-[22px] border border-slate-200 bg-slate-100 p-6 transition hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(15,23,42,0.08)]"
+              >
+                <h3 className="mb-2 text-[22px] font-bold text-slate-900">{service.title}</h3>
+                <p className="m-0">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="py-14 md:py-[72px]">
+        <div className="mx-auto w-[min(calc(100%-32px),1120px)]">
+          <h2 className="mb-3 text-4xl font-bold leading-tight text-[#103a6b]">工程實績</h2>
+          <p className="m-0 text-base text-slate-500">現在先預留版位，之後每做一個真實案子，就可以逐步替換上去。</p>
+
+          <div className="mt-7 grid gap-[18px] md:grid-cols-3">
+            {projects.map((project) => (
+              <article
+                key={project.title}
+                className="overflow-hidden rounded-[22px] border border-slate-200/90 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)]"
+              >
+                <div className="grid aspect-[4/3] place-items-center bg-gradient-to-br from-blue-100 to-slate-200 p-4 text-center text-sm text-slate-500">
+                  施工照片位置
+                  <br />
+                  {project.title}
+                </div>
+                <div className="p-6">
+                  <h3 className="mb-2 text-[22px] font-bold text-slate-900">{project.title}</h3>
+                  <p className="m-0">{project.desc}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-gradient-to-br from-[#0c2f59] to-[#123d72] py-14 text-white md:py-[72px]">
+        <div className="mx-auto grid w-[min(calc(100%-32px),1120px)] gap-6 md:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <h2 className="mb-3 text-4xl font-bold leading-tight text-white">聯絡我們</h2>
+            <p className="m-0 text-base leading-8 text-white/90">
+              有水電維修、衛浴安裝、老屋翻修、配管整理等需求，歡迎來電或加 LINE 洽詢。
+              也可以先傳現場照片，方便初步評估。
+            </p>
+          </div>
+
+          <div className="rounded-3xl bg-white p-7 text-slate-700 shadow-2xl">
+            <div><strong className="text-slate-900">公司：</strong>澤川水電有限公司</div>
+            <div><strong className="text-slate-900">電話：</strong>0935-350-295</div>
+            <div><strong className="text-slate-900">Email：</strong>lightning7620@gmail.com</div>
+            <div><strong className="text-slate-900">地址：</strong>南投市興和巷161弄20號</div>
+            <div className="mt-4 rounded-[18px] bg-slate-100 p-4 text-sm text-slate-500">
+              這裡之後可以放 LINE QR code、Google 地圖或表單連結。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-[#071a30] py-5 text-center text-sm text-white/75">
+        © 澤川水電有限公司 ｜ 網站初版可直接用於 GitHub Pages 上線
+      </footer>
+    </div>
+  );
+}
