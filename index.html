@@ -148,6 +148,38 @@
       background: rgba(255,255,255,0.08);
     }
 
+    .line-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #22c55e, #16a34a);
+      color: white;
+      padding: 13px 22px;
+      border-radius: 14px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(22, 163, 74, 0.25);
+      transition: 0.2s ease;
+    }
+
+    .line-button:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+    }
+
+    .hero-highlight {
+      margin-top: 18px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 14px;
+      color: rgba(255,255,255,0.95);
+    }
+
     .hero-side {
       display: grid;
       gap: 16px;
@@ -313,6 +345,47 @@
       margin-bottom: 10px;
     }
 
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .qr-wrap {
+      margin-top: 20px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .qr-box {
+      width: 130px;
+      background: white;
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(226,232,240,0.9);
+    }
+
+    .qr-box img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .qr-text {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .qr-text strong {
+      display: block;
+      color: var(--slate-900);
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
     .contact-note {
       margin-top: 16px;
       background: var(--blue-100);
@@ -383,12 +456,18 @@
         <div class="badge">台中與南投地區住家 / 店面水電服務</div>
         <h2>老屋翻修・衛浴安裝・水電維修</h2>
         <p>
-          提供給排水施工、漏水檢修、燈具安裝、開關插座更新與各類住家、店面水電修繕服務。
-          專注施工品質、現場整潔與溝通效率，讓客戶更安心。
+          提供給排水施工、漏水檢修、燈具安裝、開關插座更新與各類住家、店面水電修繕服務，
+          重視施工品質、現場整潔與溝通效率，讓客戶更安心。
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">立即洽詢</a>
           <a class="btn btn-secondary" href="#services">查看服務</a>
+          <a class="line-button" href="http://line.me/ti/p/GzhyNME6OI" target="_blank">加入 LINE</a>
+        </div>
+
+        <div class="hero-highlight">
+          <span>✔ 可先傳現場照片</span>
+          <span>✔ 可用 LINE 快速聯絡</span>
         </div>
       </div>
 
@@ -525,7 +604,22 @@
           <div><strong>Email：</strong>lightning7620@gmail.com</div>
           <div><strong>地址：</strong>南投市興和巷161弄20號</div>
         </div>
-        <div class="contact-note">之後可以再加上 LINE QR code、Google 地圖、表單連結。</div>
+
+        <div class="contact-actions">
+          <a class="line-button" href="http://line.me/ti/p/GzhyNME6OI" target="_blank">加入 LINE 洽詢</a>
+        </div>
+
+        <div class="qr-wrap">
+          <div class="qr-box">
+            <img src="line-qrcode.jpg" alt="LINE QR code">
+          </div>
+          <div class="qr-text">
+            <strong>掃描 QR code 加 LINE</strong>
+            <div>可直接傳現場照片、施工位置、問題說明，方便快速初步評估。</div>
+          </div>
+        </div>
+
+        <div class="contact-note">建議之後再補上 Google 地圖連結與真實施工照片，網站完整度會更高。</div>
       </div>
     </div>
   </section>
