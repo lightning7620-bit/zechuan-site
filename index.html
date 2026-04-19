@@ -432,6 +432,66 @@
       .hero h2 { font-size: 38px; }
       .panel, .service-card, .project-body, .contact-box, .hero-card { padding: 20px; }
     }
+    .lightbox-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+.lightbox-trigger img {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.lightbox-trigger:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.03);
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: min(96vw, 1200px);
+  max-height: 90vh;
+}
+
+.lightbox-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 999px;
+  background: white;
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
   </style>
 </head>
 <body>
@@ -583,7 +643,7 @@
 
       <article class="project-card">
         <div class="project-image">
-          <a href="piping-wall-01" class="lightbox-trigger">
+          <a href="piping-wall-01.jpg" class="lightbox-trigger">
            <img src="piping-wall-01.jpg" alt="分水器與牆面管路配置">
           </a>
         </div>
@@ -595,7 +655,7 @@
 
       <article class="project-card">
         <div class="project-image">
-           <a href="commercial-ceiling-01" class="lightbox-trigger">
+           <a href="commercial-ceiling-01.jpg" class="lightbox-trigger">
             <img src="commercial-ceiling-01.jpg" alt="商業空間天花與照明整合施工">
            </a>
         </div>
@@ -607,7 +667,7 @@
 
       <article class="project-card">
         <div class="project-image">
-          <a href="commercial-lighting-01" class="lightbox-trigger">
+          <a href="commercial-lighting-01.jpg" class="lightbox-trigger">
            <img src="commercial-lighting-01.jpg" alt="商空明架天花與照明施工">
           </a>
         </div>
@@ -669,7 +729,9 @@
     <div class="card-grid">
       <article class="project-card">
         <div class="project-image">
-          <img src="piping-vertical-01.jpg" alt="立面冷熱水配管施工">
+          <a href="piping-vertical-01.jpg" class="lightbox-trigger">
+           <img src="piping-vertical-01.jpg" alt="立面冷熱水配管施工">
+          </a>  
         </div>
         <div class="project-body">
           <h3>立面冷熱水配管施工</h3>
@@ -679,7 +741,9 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="drainage-01.jpg" alt="浴廁排水系統配置">
+          <a href="drainage-01.jpg" class="lightbox-trigger">
+           <img src="drainage-01.jpg" alt="浴廁排水系統配置">
+          </a>  
         </div>
         <div class="project-body">
           <h3>浴廁排水系統配置</h3>
@@ -689,7 +753,9 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="drainage-02.jpg" alt="地坪排水配管施工">
+          <a href="drainage-02.jpg" class="lightbox-trigger">
+           <img src="drainage-02.jpg" alt="地坪排水配管施工">
+          </a>  
         </div>
         <div class="project-body">
           <h3>地坪排水配管施工</h3>
@@ -699,7 +765,9 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="heater-02.jpg" alt="熱水器配管與設備細部整理">
+          <a href="heater-02.jpg" class="lightbox-trigger">
+           <img src="heater-02.jpg" alt="熱水器配管與設備細部整理">
+          </a>  
         </div>
         <div class="project-body">
           <h3>熱水器配管與設備細部整理</h3>
@@ -709,7 +777,9 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="newbuild-01.jpg" alt="新建工程基礎配管施工">
+          <a href="newbuild-01.jpg" class="lightbox-trigger">
+           <img src="newbuild-01.jpg" alt="新建工程基礎配管施工">
+          </a>  
         </div>
         <div class="project-body">
           <h3>新建工程基礎配管施工</h3>
@@ -719,7 +789,9 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="newbuild-02.jpg" alt="新建案地坪管路預埋">
+          <a href="newbuild-02.jpg" class="lightbox-trigger">
+           <img src="newbuild-02.jpg" alt="新建案地坪管路預埋">
+          </a>  
         </div>
         <div class="project-body">
           <h3>新建案地坪管路預埋</h3>
@@ -770,5 +842,49 @@
   <footer class="footer">
     <div class="container">© 澤川水電有限公司 ｜ 台中與南投地區住家 / 店面水電服務</div>
   </footer>
+<div class="lightbox-overlay" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose" aria-label="關閉">×</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+</div>
+
+<script>
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      const imageUrl = this.getAttribute('href');
+      const image = this.querySelector('img');
+      lightboxImage.src = imageUrl;
+      lightboxImage.alt = image ? image.alt : '';
+      lightbox.classList.add('active');
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightboxImage.src = '';
+    lightboxImage.alt = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
 </body>
 </html>
